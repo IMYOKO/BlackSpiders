@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>借贷报告-查列表</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link type="text/css" rel="stylesheet" href="css/layui/css/layui.css">
+	<link type="text/css" rel="stylesheet" href="css/reset.css">
+	<link type="text/css" rel="stylesheet" href="css/report.css">
+</head>
+<body class="flex-body">
+<!--head-->
+<div class="head">
+	<div class="head-wrapper mid-wrapper clearfix">
+		<div class="logo-wrapper float-left">
+			<img src="images/logo@2x.png" alt="黑爬虫"/>
+		</div>
+		<ul class="nav-list float-left clearfix">
+			<li>
+				<a href="javascript:;">首页</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="active">借贷报告</a>
+			</li>
+			<li>
+				<a href="javascript:;">财务中心</a>
+			</li>
+		</ul>
+		<div class="user-head-info float-right">
+			<span class="user-info">130****4567</span>
+			<a href="javascript:;">退出</a>
+		</div>
+	</div>
+</div>
+<!--head end-->
+
+<!--comment-->
+<!--01-->
+<div class="content-wrapper">
+<div class="borrowing-wrapper mid-wrapper box-shadow">
+	<ul class="borrowing-list clearfix">
+		<li>
+			<a href="javascript:;">借贷查询</a>
+		</li>
+		<li>
+			<a href="javascript:;">查询历史</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="active">监控列表</a>
+		</li>
+	</ul>
+</div>
+<!--01 end-->
+
+<!--03-->
+<div class="add-control-wrapper mid-wrapper box-shadow">
+	<div class="add-control-box">
+		<div class="add-table-wrapper">
+			<table class="add-table" id="add-table-01">
+				<tr>
+					<th width="76">状态</th>
+					<th>姓名</th>
+					<th>手机号</th>
+					<th width="180">身份证</th>
+					<th>待还总额(元)</th>
+					<th>监控阈值(元)</th>
+					<th width="180">监控起止时间</th>
+					<th width="140">操作</th>
+				</tr>
+				<tr>
+					<td class="state-jkz">监控中</td>
+					<td>张三二</td>
+					<td>13094700438</td>
+					<td>3624271998526545879</td>
+					<td>42692.00</td>
+					<td>42639.36</td>
+					<td>2017/07/08至2017/07/08</td>
+					<td class="btn-change">
+						<a href="javascript:;" class="h-quezhi">阈值</a>
+						<a href="javascript:;">监控</a>
+						<a href="javascript:;">报告</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="state-bb">报表</td>
+					<td>张三</td>
+					<td>13094700438</td>
+					<td>3624271998526545879</td>
+					<td>42692.00</td>
+					<td>42639.36</td>
+					<td>2017/07/08至2017/07/08</td>
+					<td class="btn-change">
+						<a href="javascript:;" class="h-quezhi">阈值</a>
+						<a href="javascript:;">监控</a>
+						<a href="javascript:;">报告</a>
+					</td>
+				</tr>
+				<tr>
+					<td>已完成</td>
+					<td>张三</td>
+					<td>13094700438</td>
+					<td>3624271998526545879</td>
+					<td>42692.00</td>
+					<td>42639.36</td>
+					<td>2017/07/08至2017/07/08</td>
+					<td class="btn-change">
+						<a href="javascript:;" class="h-quezhi">阈值</a>
+						<a href="javascript:;">监控</a>
+						<a href="javascript:;">报告</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--分页-->
+		<div class="page-list-wrapper">
+			<!--这里是分页部分-->
+		</div>
+		<!--分页 end-->
+	</div>
+</div>
+</div>
+<!--03 end-->
+
+<!--footer-->
+<div class="footer-wrapper">
+	<div class="footer-content mid-wrapper">
+		©湖南九象信息集团有限公司&nbsp;&nbsp;&nbsp;湘ICP备17016724号
+	</div>
+</div>
+<!--footer end-->
+
+<!--弹窗-->
+<div class="popup-window-wrapper">
+	<div class="popup-bg"></div>
+	<div class="popup-window-box">
+		<div class="popup-content popup-content-02 clearfix">
+			<div class="popup-table-item float-left">
+				<div class="popup-table-left float-left">
+					监控阈值
+				</div>
+				<div class="popup-table-right float-left clearfix">
+					<p class="val-quezhi"><input type="text" name="" id="v-price" class="v-num02" placeholder="0" />元</p>
+				</div>
+			</div>
+			<div class="popup-table-item popup-table-item-02 float-left">
+				<div class="popup-table-left float-left">
+					实时监控
+				</div>
+				<div class="popup-table-right float-left clearfix">
+					<div class="switch-wrapper off">
+						<input type="checkbox" name="" value="" class="witch-check" id="witch-check">
+					</div>
+				</div>
+			</div>
+			<a href="javascript:;" class="btn-add-ok float-right">确定修改</a>
+		</div>
+	</div>
+</div>
+<!--弹窗 end-->
+
+<!--comment end-->
+
+<!--JS-->
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="css/layui/layui.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//全选 反选
+		$('#check-all').click(function(){
+			var isChecked = $(this).prop("checked");
+			if(isChecked){
+				$('#add-table-01 .check-item').prop("checked",true);
+			} else {
+				$('#add-table-01 .check-item').prop("checked",false);
+			}
+		})
+		
+		//开关
+		$('#witch-check').click(function(){
+			var isChecked = $(this).prop("checked");
+			if(isChecked){
+				$("#v-price").attr("readonly",true);
+				$(this).parent().removeClass('off').addClass('on');
+			} else {
+				$("#v-price").attr("readonly",false);
+				$(this).parent().removeClass('on').addClass('off');
+			}
+		});
+		
+		$('.h-quezhi').click(function(){
+			$(".popup-window-wrapper").show();
+		})
+		
+		//点击关闭弹窗
+		$(".close-popup-wrapper, .popup-bg").click(function(){
+			$(".popup-window-wrapper").hide();
+		})
+	})
+	
+</script>
+<!--JS-end-->
+</body>
+</html>

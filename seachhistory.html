@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>借贷报告-查询历史</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link type="text/css" rel="stylesheet" href="css/layui/css/layui.css">
+	<link type="text/css" rel="stylesheet" href="css/reset.css">
+	<link type="text/css" rel="stylesheet" href="css/report.css">
+</head>
+<body class="flex-body">
+<!--head-->
+<div class="head">
+	<div class="head-wrapper mid-wrapper clearfix">
+		<div class="logo-wrapper float-left">
+			<img src="images/logo@2x.png" alt="黑爬虫"/>
+		</div>
+		<ul class="nav-list float-left clearfix">
+			<li>
+				<a href="javascript:;">首页</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="active">借贷报告</a>
+			</li>
+			<li>
+				<a href="javascript:;">财务中心</a>
+			</li>
+		</ul>
+		<div class="user-head-info float-right">
+			<span class="user-info">130****4567</span>
+			<a href="javascript:;">退出</a>
+		</div>
+	</div>
+</div>
+<!--head end-->
+
+<!--comment-->
+<!--01-->
+<div class="content-wrapper">
+<div class="borrowing-wrapper mid-wrapper box-shadow">
+	<ul class="borrowing-list clearfix">
+		<li>
+			<a href="javascript:;">借贷查询</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="active">查询历史</a>
+		</li>
+		<li>
+			<a href="javascript:;">监控列表</a>
+		</li>
+	</ul>
+</div>
+<!--01 end-->
+
+<!--02-->
+<div class="seach-wrapper mid-wrapper box-shadow">
+	<form action="" method="" class="seach-wrapper-form">
+		<label class="input-box">
+			姓名<input type="text" name="" placeholder="请输入姓名" style="width: 100px;" />
+		</label>
+		<label class="input-box">
+			手机号码<input type="text" name="" placeholder="请输入手机号码" />
+		</label>
+		<label class="input-box">
+			时间<input type="text" class="layui-input" id="add-time" name="" placeholder="请选择时间" />
+		</label>
+		<label class="submit-box float-right">
+			<input type="button" class="" value=""/>
+		</label>
+	</form>
+</div>
+<!--02 end-->
+
+<!--03-->
+<div class="add-control-wrapper mid-wrapper box-shadow">
+	<div class="add-control-box">
+		<div class="button-add-box">
+			<a href="javascript:;" class="button-add-jk02" id="button-add-jk02">添加至监测</a>
+		</div>
+		<div class="add-table-wrapper">
+			<table class="add-table" id="add-table-01">
+				<tr>
+					<th width="60">
+						<input type="checkbox" id="check-all" name=""  value="" />
+					</th>
+					<th>姓名</th>
+					<th>手机号</th>
+					<th>身份证</th>
+					<th>当前逾期</th>
+					<th>待还总额</th>
+					<th>报告日期</th>
+					<th width="164">操作</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="check-item" name=""  value="" />
+					</td>
+					<td>张三</td>
+					<td>13094700438</td>
+					<td>3624271998526545879</td>
+					<td>42天</td>
+					<td>42639.36</td>
+					<td>2017/07/08</td>
+					<td class="btn-change">
+						<a href="javascript:;">详情</a>
+						<a href="javascript:;">一键再查</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="check-item" name=""  value="" />
+					</td>
+					<td>张三</td>
+					<td>13094700438</td>
+					<td>3624271998526545879</td>
+					<td>42天</td>
+					<td>42639.36</td>
+					<td>2017/07/08</td>
+					<td class="btn-change">
+						<a href="javascript:;">详情</a>
+						<a href="javascript:;">一键再查</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="check-item" name=""  value="" />
+					</td>
+					<td>张三</td>
+					<td>13094700438</td>
+					<td>3624271998526545879</td>
+					<td>42天</td>
+					<td>42639.36</td>
+					<td>2017/07/08</td>
+					<td class="btn-change">
+						<a href="javascript:;">详情</a>
+						<a href="javascript:;">一键再查</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="check-item" name=""  value="" />
+					</td>
+					<td>张三</td>
+					<td>13094700438</td>
+					<td>3624271998526545879</td>
+					<td>42天</td>
+					<td>42639.36</td>
+					<td>2017/07/08</td>
+					<td class="btn-change">
+						<a href="javascript:;">详情</a>
+						<a href="javascript:;">一键再查</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="check-item" name=""  value="" />
+					</td>
+					<td>张三</td>
+					<td>13094700438</td>
+					<td>3624271998526545879</td>
+					<td>42天</td>
+					<td>42639.36</td>
+					<td>2017/07/08</td>
+					<td class="btn-change">
+						<a href="javascript:;">详情</a>
+						<a href="javascript:;">一键再查</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--分页-->
+		<div class="page-list-wrapper">
+			<!--这里是分页部分-->
+		</div>
+		<!--分页 end-->
+	</div>
+</div>
+</div>
+<!--03 end-->
+
+<!--footer-->
+<div class="footer-wrapper">
+	<div class="footer-content mid-wrapper">
+		©湖南九象信息集团有限公司&nbsp;&nbsp;&nbsp;湘ICP备17016724号
+	</div>
+</div>
+<!--footer end-->
+
+<!--弹窗-->
+<div class="popup-window-wrapper">
+	<div class="popup-bg"></div>
+	<div class="popup-window-box">
+		<div class="popup-header">
+			<h3>添加监控</h3>
+			<div class="close-popup-wrapper"></div>
+		</div>
+		<div class="popup-content">
+			<div class="popup-explain">
+				<p>监控阈值（每隔一小时系统会自动查询列表用户的待会总额，当监控数据超过设定的阈值时会发送短信到您的手机）</p>
+				<p>实时监控（每当用户待还总额发送变化时，就会发送短信到您的手机）</p>
+			</div>
+			<div class="check-results-wrapper">
+				<table class="fuzhai-table check-results-table">
+					<tr class="th">
+						<th width="160">姓名</th>
+						<th>手机号</th>
+						<th>身份证</th>
+						<th width="160">操作</th>
+					</tr>
+					<tr>
+						<td>张三</td>
+						<td>13049562548</td>
+						<td>362427198562451256</td>
+						<td class="btn-change">
+							<a href="javascript:;">移除</a>
+						</td>
+					</tr>
+					<tr>
+						<td>张三</td>
+						<td>13049562548</td>
+						<td>362427198562451256</td>
+						<td class="btn-change">
+							<a href="javascript:;">移除</a>
+						</td>
+					</tr>
+				</table>
+				<div class="popup-table-form">
+					<div class="popup-table-item clearfix">
+						<div class="popup-table-left float-left">
+							监控天数
+						</div>
+						<div class="popup-table-right clearfix">
+							<span class="btn-add-num" id="sub-num">-</span><input type="text" class="v-num" id="v-num" name="" value="0" /><span class="btn-add-num" id="add-num">+</span>
+						</div>
+					</div>
+					<div class="popup-table-item clearfix">
+						<div class="popup-table-left float-left">
+							监控阈值
+						</div>
+						<div class="popup-table-right clearfix">
+							<!--<p class="val-quezhi"><span id="v-price">200</span>元</p>-->
+							<p class="val-quezhi"><input type="text" name="" class="v-num02" id="v-price" value="10"  style="width: 106px;" />元</p>
+						</div>
+					</div>
+					<div class="popup-table-item clearfix">
+						<div class="popup-table-left float-left">
+							实时监控
+						</div>
+						<div class="popup-table-right clearfix">
+							<div class="switch-wrapper off">
+								<input type="checkbox" name="" value="" class="witch-check" id="witch-check" />
+							</div>
+						</div>
+					</div>
+					<div class="popup-table-total">
+						监控费用：<span id="v-total">0</span>元
+					</div>
+					<div class="popup-table-btn">
+						<a href="javascript:;" class="btn-add-ok float-right">确定添加</a>
+						<!--<a href="javascript:;" class="btn-add-ok float-right btn-default">确定添加</a>-->
+					</div>
+				</div>
+			</div>
+			<!--报错或者提示-->
+			<div class="erro-wrapper">
+				<div class="erro-item">
+					<span class="erro-item-01">
+						您的余额不足，请继续充值。<a href="javascript:;" class="btn-add-moeny">立即充值</a>
+					</span>
+					<!--<span class="erro-item-01 erro-item-02">
+						支付成功！
+					</span>-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--弹窗 end-->
+
+<!--comment end-->
+
+<!--JS-->
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="css/layui/layui.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//全选 反选
+		$('#check-all').click(function(){
+			var isChecked = $(this).prop("checked");
+			if(isChecked){
+				$('#add-table-01 .check-item').prop("checked",true);
+			} else {
+				$('#add-table-01 .check-item').prop("checked",false);
+			}
+		})
+		
+		//点击加减
+		$("#add-num").click(function(){
+			var num = parseFloat($("#v-num").val());
+			var price = parseFloat($("#v-price").val());
+			var total;
+			if(isNaN(num)){
+				num = 0;
+			}
+			num = num + 1;
+			total = num * price;
+			$("#v-num").val(num);
+			$("#v-total").html(total);
+		})
+		$("#sub-num").click(function(){
+			var num = parseFloat($("#v-num").val());
+			var price = parseFloat($("#v-price").val());
+			var total;
+			if(isNaN(num)){
+				num = 0;
+			}
+			num = num - 1;
+			if(num <= 0) {
+				num = 0;
+			}
+			total = num * price;
+			$("#v-num").val(num);
+			$("#v-total").html(total);
+		})
+		//输入
+		$("#v-num, #v-price").blur(function(){
+			var num = parseFloat($("#v-num").val());
+			var price = parseFloat($("#v-price").val());
+			var total;
+			if(isNaN(num)){
+				num = 0;
+				$("#v-num").val(num);
+			}
+			if(isNaN(price)){
+				price = 0;
+				$("#v-price").val(price);
+			}
+			total = num * price;
+			$("#v-total").html(total);
+		})
+		
+		//开关
+		$('#witch-check').click(function(){
+			var isChecked = $(this).prop("checked");
+			if(isChecked){
+				$("#v-price").attr("readonly",true);
+				$(this).parent().removeClass('off').addClass('on');
+			} else {
+				$("#v-price").attr("readonly",false);
+				$(this).parent().removeClass('on').addClass('off');
+			}
+		});
+		
+		$("#button-add-jk02").click(function(){
+			$(".popup-window-wrapper").show();
+		})
+		
+		//点击关闭弹窗
+		$(".close-popup-wrapper, .popup-bg").click(function(){
+			$("#v-num").val('0');
+			$(".popup-window-wrapper").hide();
+		})
+	})
+	
+	layui.use('laydate', function(){
+		var laydate = layui.laydate;
+	
+		//执行一个laydate实例
+		laydate.render({
+	    	elem: '#add-time' //指定元素
+	    });
+	});
+</script>
+<!--JS-end-->
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>信用查询-学历查询</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link type="text/css" rel="stylesheet" href="css/reset.css">
+	<link type="text/css" rel="stylesheet" href="css/report.css">
+</head>
+<body class="flex-body">
+<!--head-->
+<div class="head">
+	<div class="head-wrapper mid-wrapper clearfix">
+		<div class="logo-wrapper float-left">
+			<img src="images/logo@2x.png" alt="黑爬虫"/>
+		</div>
+		<ul class="nav-list float-left clearfix">
+			<li>
+				<a href="javascript:;">首页</a>
+			</li>
+			<li>
+				<a href="javascript:;">借贷报告</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="active">信用查询</a>
+			</li>
+			<li>
+				<a href="javascript:;">财务中心</a>
+			</li>
+		</ul>
+		<div class="user-head-info float-right">
+			<span class="user-info">130****4567</span>
+			<a href="javascript:;">退出</a>
+		</div>
+	</div>
+</div>
+<!--head end-->
+
+<!--comment-->
+<!--01-->
+<div class="content-wrapper">
+<div class="borrowing-wrapper mid-wrapper box-shadow">
+	<ul class="borrowing-list clearfix">
+		<li>
+			<a href="javascript:;">运营分析</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="active">学历查询</a>
+		</li>
+		<li>
+			<a href="javascript:;">实名认证</a>
+		</li>
+	</ul>
+</div>
+<!--01 end-->
+
+<!--02-->
+<div class="seach-wrapper mid-wrapper box-shadow">
+	<form action="" method="" class="seach-wrapper-form">
+		<label class="input-box">
+			学信账号<input type="text" name="" placeholder="请输入学信账号" />
+		</label>
+		<label class="input-box">
+			学信密码<input type="password" name="" placeholder="请输入学信密码" />
+		</label>
+		<label class="submit-box float-right">
+			<input type="button" class="" value=""/>
+		</label>
+	</form>
+</div>
+<!--02 end-->
+
+<!--03-->
+<div class="add-control-wrapper mid-wrapper box-shadow">
+	<div class="add-control-box">
+		<div class="button-add-box">
+			<a href="javascript:;" class="button-add-jk02">下载报告</a>
+			<a href="javascript:;" class="button-add-jk02 button-add-jk03">查询历史</a>
+		</div>
+		<div class="add-table-wrapper">
+			<table class="add-table" id="add-table-01">
+				<tr>
+					<th width="60">
+						<input type="checkbox" id="check-all" name=""  value="" />
+					</th>
+					<th>学信网账号</th>
+					<th>学信网密码</th>
+					<th>报告日期</th>
+					<th width="164">操作</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="check-item" name=""  value="" />
+					</td>
+					<td>13094700438</td>
+					<td>3dfas8786@@dasda</td>
+					<td>2017/07/08</td>
+					<td class="btn-change">
+						<a href="javascript:;">报告详情</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="check-item" name=""  value="" />
+					</td>
+					<td>13094700438</td>
+					<td>3dfas8786@@dasda</td>
+					<td>2017/07/08</td>
+					<td class="btn-change">
+						<a href="javascript:;">报告详情</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="check-item" name=""  value="" />
+					</td>
+					<td>13094700438</td>
+					<td>3dfas8786@@dasda</td>
+					<td>2017/07/08</td>
+					<td class="btn-change">
+						<a href="javascript:;">报告详情</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--分页-->
+		<div class="page-list-wrapper">
+			<!--这里是分页部分-->
+		</div>
+		<!--分页 end-->
+	</div>
+</div>
+</div>
+<!--03 end-->
+
+<!--footer-->
+<div class="footer-wrapper">
+	<div class="footer-content mid-wrapper">
+		©湖南九象信息集团有限公司&nbsp;&nbsp;&nbsp;湘ICP备17016724号
+	</div>
+</div>
+<!--footer end-->
+
+<!--comment end-->
+
+<!--JS-->
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//全选 反选
+		$('#check-all').click(function(){
+			var isChecked = $(this).prop("checked");
+			if(isChecked){
+				$('#add-table-01 .check-item').prop("checked",true);
+			} else {
+				$('#add-table-01 .check-item').prop("checked",false);
+			}
+		})
+	})
+</script>
+<!--JS-end-->
+</body>
+</html>
