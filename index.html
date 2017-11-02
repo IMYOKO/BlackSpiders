@@ -28,7 +28,20 @@
 		</ul>
 		<div class="user-head-info float-right">
 			<span class="user-info">130****4567</span>
-			<a href="javascript:;">退出</a>
+			<div id="user-index" class="user-index">
+				<a href="javascript:;"><img src="images/icon_user04.png"/>个人中心</a>
+				<ul id="user-index-list" class="user-index-list box-shadow">
+					<li>
+						<a href="javascript:;">修改密码</a>
+					</li>
+					<li>
+						<a href="javascript:;">绑定微信</a>
+					</li>
+					<li>
+						<a href="javascript:;" onclick="out()">退出账号</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
@@ -322,6 +335,7 @@
 <!--JS-->
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript">
 	//点解借款详情
 	$(".button-jiekuan").each(function(){

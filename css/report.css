@@ -32,11 +32,38 @@
 	margin-right: 20px;
 	color: #fff;
 }
-.user-head-info a {
-	color: #c0c0c0;
+.user-index {
+	float: right;
+	position: relative;
 }
-.user-head-info a:hover {
+.user-index>a {
+	color: #c0c0c0;
+	line-height: 21px;
+}
+.user-index>a img {
+	margin-right: 4px;
+	margin-bottom: 3px;
+}
+.user-index-list li a:hover {
 	color: #e73536;
+}
+/*新增下拉框*/
+.user-index-list {
+	width: 100px;
+	padding: 4px 0;
+	text-align: center;
+	display: none;
+	background: #fff;
+	position: absolute;
+	right: -12px;
+	top: 64px;
+}
+.user-index-list li {
+	line-height: 40px;
+}
+.user-index-list li a {
+	color: #999;
+	font-size: 16px;
 }
 
 /*底部*/
