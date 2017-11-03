@@ -265,13 +265,10 @@
 		( widthPercentFloat > 100 ) ? widthPercentFloat = 100 : widthPercentFloat = widthPercentFloat;
 		widthPercent = widthPercentFloat + "%";
 		
-		
 		if(result < 1) {
-			console.log(result,widthPercent);
 			$vipGradeIng.animate({width:widthPercent},500);
 			return false;
 		}
-		console.log(result,widthPercent);
 		className = 'vip-0' + result;
 		
 		$("#vip-grade-list li").eq(result).find('span').html("");
