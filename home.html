@@ -194,7 +194,7 @@
 		</div>
 		<div class="popup-content clearfix">
 			<div class="vip-grade-wrapper">
-				<h4>当前消费：<span id="current-monery">4000</span>元</h4>
+				<h4>当前消费：<span id="current-monery">60000</span>元</h4>
 				<div class="vip-grade-item">
 					<div class="vip-grade-box">
 						<span class="vip-grade-ing" id="vip-grade-ing"></span>
@@ -247,44 +247,98 @@
 <script type="text/javascript" src="css/layui/layui.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript">
-	//计算VIP等级
-	function vipGrade(){
-		var result,
-			className,
-			widthPercentFloat,
-			widthPercent,
-			TOTALMONERY = 100000,
-			$vipGradeIng = $("#vip-grade-ing"),
-			currentMonery = parseInt($("#current-monery").html());
-			
-		result = parseInt(currentMonery/TOTALMONERY*10);
-		( result > 4 && result < 10 ) ? result = 4 : result = result;
-		( result > 10 ) ? result = 10 : result = result;
-		
-		widthPercentFloat = parseFloat(currentMonery/TOTALMONERY*100);
-		( widthPercentFloat > 100 ) ? widthPercentFloat = 100 : widthPercentFloat = widthPercentFloat;
-		widthPercent = widthPercentFloat + "%";
-		
-		if(result < 1) {
-			$vipGradeIng.animate({width:widthPercent},500);
-			return false;
+	//计算VIP等级：面向对象方法
+	(function($, window, document, undefind) {
+		//创建构造函数：VipGrade
+		function VipGrade(option){
+			//参数配置
+			this.defaults = {
+				popupEle: "",
+				moneryEle: "",
+				ingEle: "",
+				vipEle: "",
+				closeEle: ""
+			},
+			this.option = $.extend({}, this.defaults, option)
 		}
-		className = 'vip-0' + result;
 		
-		$("#vip-grade-list li").eq(result).find('span').html("");
-		$("#vip-grade-list li").eq(result).find('span').addClass(className);
-		$vipGradeIng.animate({width:widthPercent},500);
-	}
+		//初始化
+		VipGrade.prototype.init = function(){
+			var result,
+				className,
+				widthPercentFloat,
+				widthPercent,
+				TOTALMONERY = 100000,
+				currentMonery = parseInt($(this.option.moneryEle).html());
+			
+			result = parseInt(currentMonery/TOTALMONERY*10);
+			( result > 4 && result < 10 ) ? result = 4 : result = result;
+			( result >= 10 ) ? result = 5 : result = result;
+			
+			widthPercentFloat = parseFloat(currentMonery/TOTALMONERY*100);
+			( widthPercentFloat > 100 ) ? widthPercentFloat = 100 : widthPercentFloat = widthPercentFloat;
+			widthPercent = widthPercentFloat + "%";
+			
+			if(result >= 1) {
+				className = 'vip-0' + result;
+				console.log(result);
+				this.setVip(result,className)();
+			}
+			this.setWidthAnimate(widthPercent)();
+			this.close();
+		}
+		
+		//添加设置等级比例长度动画方法
+		VipGrade.prototype.setWidthAnimate = function(w) {
+			var _this = this;
+			return function() {
+				$(_this.option.ingEle).animate({width:w},500);
+			};
+		}
+		
+		//添加设置VIP等级方法
+		VipGrade.prototype.setVip = function(i, c) {
+			var _this = this;
+			return function() {
+				$(_this.option.vipEle).eq(i).find('span').html("");
+				$(_this.option.vipEle).eq(i).find('span').addClass(c);
+			};
+		}
+		
+		//关闭
+		VipGrade.prototype.close = function() {
+			var _this = this;
+	    	return (function() {
+		    	$(_this.option.closeEle).click(function() {
+					$(_this.option.ingEle).css("width",0);
+					$(_this.option.popupEle).hide();
+				});
+			})();
+		}
+		
+		//声明一个新的函数，并将这个函数扩展到扩展到jQuery对象中
+		var vipGrade = function(option) {
+			//创建一个实例：vipGradeItem
+			var vipGradeItem = new VipGrade(option);
+			return	vipGradeItem.init();
+		}
+		
+		//扩展到jQuery对象中
+		$.extend({vipGrade});
+	})(jQuery, window, document);
 	
 	$(function(){
 		$("#vip-img").click(function(){
 			$(".popup-window-wrapper").show();
-			vipGrade();
-		})
-		//点击关闭弹窗
-		$(".close-popup-wrapper, .popup-bg").click(function(){
-			$("#vip-grade-ing").css("width",0);
-			$(".popup-window-wrapper").hide();
+			
+			//调用计算VIP等级方法
+			$.vipGrade({
+				popupEle: ".popup-window-wrapper",
+				moneryEle: "#current-monery",
+				ingEle: "#vip-grade-ing",
+				vipEle: "#vip-grade-list li",
+				closeEle: ".close-popup-wrapper, .popup-bg"
+			});
 		})
 	})
 	
