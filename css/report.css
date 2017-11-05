@@ -1199,3 +1199,171 @@
 td span.ing {
 	color: #4dca56;
 }
+
+
+/*弹窗*/
+.popup-content-03 {
+	padding: 6px 20px 20px;
+}
+.add-client-form {
+	display: block;
+}
+.add-wrapper-01, .add-wrapper-02 {
+	border: 1px solid #dedcdd;
+	position: relative;
+}
+.add-wrapper-01 {
+	margin-bottom: 20px;
+}
+.client-item {
+	border-bottom: 1px solid #dedcdd;
+}
+.client-item li {
+	width: 33.33%;
+	float: left;
+	margin-left: -1px;
+	border-right: 1px solid #dedcdd;
+}
+.client-item li:last-child {
+	border-right: none;
+}
+.client-item-label {
+	color: #666;
+	font-size: 14px;
+	padding: 11px 0;
+	display: inline-block;
+	padding-left: 20px;
+}
+.client-item-label input {
+	width: 160px;
+	height: 15px;
+	line-height: 15px;
+	padding: 5px 10px;
+	border: 1px solid #9f9f9f;
+}
+.client-item-label input.addr {
+	width: 784px;
+}
+.file-list {
+	padding: 20px;
+}
+.file-list li {
+	margin-bottom: 12px;
+}
+.file-list-item {
+	color: #666;
+	display: block;
+	height: 24px;
+	font-size: 14px;
+	line-height: 24px;
+}
+.file-list-item>span {
+	float: left;
+	display: inline-block;
+}
+.file-list-item>span.left {
+	text-indent: 1em;
+}
+.file-wrapper {
+	height: 24px;
+	line-height: 24px;
+	margin-right: 20px;
+}
+.file-box {
+	width: 88px;
+	height: 24px;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	float: left;
+}
+.file-box input[type=file] {
+	width: 88px;
+	height: 24px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+.file-box i {
+	width: 88px;
+	height: 24px;
+	color: #fff;
+	text-align: center;
+	background: #48b1ed;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.file-wrapper em {
+	color: #6371ff;
+	height: 24px;
+	line-height: 24px;
+	margin-left: 10px;
+}
+.file-explain {
+	color: #999;
+}
+.file-explain b {
+	color: #666;
+}
+.file-explain a {
+	color: #6371ff;
+	margin-left: 20px;
+	text-decoration: underline;
+}
+.left-position {
+	width: 4px;
+	height: 51px;
+	background: #ff2626;
+	position: absolute;
+	left: -4px;
+	top: -1px;
+}
+.left-position-02 {
+	background: #09db09;
+}
+
+/*提交*/
+.sumbit-wrapper-bottom {
+	margin-top: 20px;
+	padding: 0 10px;
+	position: relative;
+}
+.collect-fee-list li {
+	color: #666;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.collect-fee-list li span.right em {
+	color: #ff3636;
+	font-size: 18px;
+}
+.collect-fee-list li a {
+	color: #6371ff;
+	margin-right: 20px;
+	text-decoration: underline;
+}
+.sumbit-wrapper-btn {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -18px;
+}
+
+/*添加法律申述*/
+.tip-wrapper {
+	padding: 20px;
+}
+.tip-box {
+	width: 100%;
+	color: #666;
+	border: none;
+	resize: none;
+	font-size: 14px;
+	line-height: 20px;
+}

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>法律催收-法律申述</title>
+	<title>法律催收-地面催收</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<link type="text/css" rel="stylesheet" href="css/reset.css">
@@ -62,10 +62,10 @@
 				<a href="javascript:;">电话催收</a>
 			</li>
 			<li>
-				<a href="javascript:;">地面催收</a>
+				<a href="javascript:;" class="active">地面催收</a>
 			</li>
 			<li>
-				<a href="javascript:;" class="active">法律申述</a>
+				<a href="javascript:;">法律申述</a>
 			</li>
 		</ul>
 	</div>
@@ -91,7 +91,9 @@
 	<div class="add-control-wrapper mid-wrapper box-shadow">
 		<div class="add-control-box">
 			<div class="button-add-box">
-				<a href="javascript:;" class="button-add-jk02 button-add-jk04" id="add-new-list">添加新申述名单</a>
+				<a href="javascript:;" class="button-add-jk02 button-add-jk04" id="add-new-list">添加新催收名单</a>
+				<a href="javascript:;" class="button-add-jk02">下载报告</a>
+				<a href="javascript:;" class="button-add-jk02 button-add-jk03" style="width: 120px;">移交地面催收</a>
 			</div>
 			<div class="add-table-wrapper">
 				<table class="add-table" id="add-table-01">
@@ -176,12 +178,13 @@
 	<div class="popup-bg"></div>
 	<div class="popup-window-box">
 		<div class="popup-header">
-			<h3>添加法律申述名单</h3>
+			<h3>添加地面催收名单</h3>
 			<div class="close-popup-wrapper"></div>
 		</div>
 		<div class="popup-content popup-content-03 clearfix">
 			<form action="" method="" class="add-client-form"></form>
 				<div class="add-wrapper-01">
+					<div class="left-position"></div>
 					<ul class="client-item clearfix">
 						<li>
 							<label class="client-item-label">客户姓名：<input type="text" name="" placeholder="请输入客户姓名" /> </label>
@@ -243,10 +246,36 @@
 					</ul>
 				</div>
 				<div class="add-wrapper-02">
-					<div class="tip-wrapper">
-						<textarea class="tip-box" name="" rows="2" cols="">添加备注</textarea>
-					</div>
-				</div>	
+					<div class="left-position left-position-02"></div>
+					<ul class="client-item clearfix">
+						<li>
+							<label class="client-item-label">委托人姓名：<input type="text" name="" placeholder="请输入委托人姓名" /> </label>
+						</li>
+						<li>
+							<label class="client-item-label">委托人电话：<input type="text" name="" placeholder="请输入委托人电话" /> </label>
+						</li>
+						<li>
+							<label class="client-item-label">委托人身份证：<input type="text" name="" placeholder="请输入委托人身份证" /> </label>
+						</li>
+					</ul>
+					<ul class="file-list">
+						<li>
+							<label class="file-list-item">
+								<span>上传身份证照：</span>
+								<span class="file-wrapper"><span class="file-box"><i>上传正面</i><input type="file" class="file-item-other" name="" id="" value="" /></span><em></em></span>
+								<span class="file-wrapper"><span class="file-box"><i>上传反面</i><input type="file" class="file-item-other" name="" id="" value="" /></span><em></em></span>
+								<span class="file-explain">支持上传文件格式 jpg png</span>
+							</label>
+						</li>
+						<li>
+							<label class="file-list-item">
+								<span class="left">上传授权书：</span>
+								<span class="file-wrapper"><span class="file-box"><i>选择文件</i><input type="file" class="file-item" name="" id="" value="" /></span><em class="file-name"></em></span>
+								<span class="file-explain">支持上传文件格式  pdf jpg png<b>（于左下角下载授权书，签字盖章后上传）</b><a href="javascript:;" target="_blank">预览样书</a></span>
+							</label>
+						</li>
+					</ul>
+				</div>
 				<div class="sumbit-wrapper-bottom">
 					<ul class="collect-fee-list">
 						<li>
@@ -256,7 +285,7 @@
 							<span class="left">保证金：</span><span class="right"><em>500元</em> (冻结账户余额，7天未上门将退至账户余额)</span>
 						</li>
 						<li>
-							<a href="javascript:;">下载《催收收费说明》</a>
+							<a href="javascript:;">下载《催收收费说明》</a><a href="javascript:;">下载《委托授权书》</a>
 						</li>
 					</ul>
 					<div class="sumbit-wrapper-btn">

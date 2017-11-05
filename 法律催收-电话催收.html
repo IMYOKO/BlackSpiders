@@ -101,11 +101,12 @@
 						<th width="60">
 							<input type="checkbox" id="check-all" name=""  value="" />
 						</th>
-						<th>客户姓名</th>
-						<th>客户电话</th>
-						<th>客户身份证</th>
-						<th>联系住址</th>
-						
+						<th>姓名</th>
+						<th>手机号</th>
+						<th>身份证</th>
+						<th>提交时间</th>
+						<th>状态</th>
+						<th width="160">操作</th>
 					</tr>
 					<tr>
 						<td>
@@ -114,9 +115,44 @@
 						<td>张三</td>
 						<td>13094700438</td>
 						<td>3624271998526545879</td>
-						<td>广东省深圳市宝安区XXXX街道XX栋XX楼XXXX</td>
+						<td>2017/11/4 09:17:22</td>
+						<td><span>等待受理</span></td>
+						<td class="btn-change">
+							<a href="javascript:;">资料</a>
+							<a href="javascript:;">进度</a>
+							<a href="javascript:;">撤销</a>
+						</td>
 					</tr>
-					
+					<tr>
+						<td>
+							<input type="checkbox" class="check-item" name=""  value="" />
+						</td>
+						<td>张三</td>
+						<td>13094700438</td>
+						<td>3624271998526545879</td>
+						<td>2017/11/4 09:17:22</td>
+						<td><span class="ing">申述中</span></td>
+						<td class="btn-change">
+							<a href="javascript:;">资料</a>
+							<a href="javascript:;">进度</a>
+							<a href="javascript:;">撤销</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" class="check-item" name=""  value="" />
+						</td>
+						<td>张三</td>
+						<td>13094700438</td>
+						<td>3624271998526545879</td>
+						<td>2017/11/4 09:17:22</td>
+						<td><span>已撤销</span></td>
+						<td class="btn-change">
+							<a href="javascript:;">资料</a>
+							<a href="javascript:;">进度</a>
+							<a href="javascript:;">撤销</a>
+						</td>
+					</tr>
 				</table>
 			</div>
 			<!--分页-->
@@ -142,51 +178,121 @@
 	<div class="popup-bg"></div>
 	<div class="popup-window-box">
 		<div class="popup-header">
-			<h3>VIP等级</h3>
+			<h3>添加电话催收名单</h3>
 			<div class="close-popup-wrapper"></div>
 		</div>
-		<div class="popup-content clearfix">
-			<div class="vip-grade-wrapper">
-				<h4>当前消费：<span id="current-monery">60000</span>元</h4>
-				<div class="vip-grade-item">
-					<div class="vip-grade-box">
-						<span class="vip-grade-ing" id="vip-grade-ing"></span>
-						<span class="vip-grade-bg"></span>
+		<div class="popup-content popup-content-03 clearfix">
+			<form action="" method="" class="add-client-form"></form>
+				<div class="add-wrapper-01">
+					<div class="left-position"></div>
+					<ul class="client-item clearfix">
+						<li>
+							<label class="client-item-label">客户姓名：<input type="text" name="" placeholder="请输入客户姓名" /> </label>
+						</li>
+						<li>
+							<label class="client-item-label">客户电话：<input type="text" name="" placeholder="请输入客户电话" /> </label>
+						</li>
+						<li>
+							<label class="client-item-label">客户身份证：<input type="text" name="" placeholder="请输入客户身份证" /> </label>
+						</li>
+					</ul>
+					<div class="client-item">
+						<label class="client-item-label">联系地址：<input type="text" class="addr" name="" placeholder="请输入客户联系地址" /> </label>
 					</div>
-					<ul class="vip-grade-list" id="vip-grade-list">
-						<li class="vip-li-0">
-							<span>vip0</span>
+					<ul class="file-list">
+						<li>
+							<label class="file-list-item">
+								<span>上传社会信息：</span>
+								<span class="file-wrapper"><span class="file-box"><i>选择文件</i><input type="file" class="file-item" name="" id="" value="" /></span><em class="file-name">123.txt</em></span>
+								<span class="file-explain">支持上传文件格式 zip rar txt word excel pdf<b>（父母/朋友/室友联系电话等）</b></span>
+							</label>
 						</li>
-						<li class="vip-li-1">
-							<i></i>
-							<span>vip1</span>
+						<li>
+							<label class="file-list-item">
+								<span>上传身份证照：</span>
+								<span class="file-wrapper"><span class="file-box"><i>选择文件</i><input type="file" class="file-item" name="" id="" value="" /></span><em class="file-name"></em></span>
+								<span class="file-wrapper"><span class="file-box"><i>选择文件</i><input type="file" class="file-item" name="" id="" value="" /></span><em class="file-name"></em></span>
+								<span class="file-explain">支持上传文件格式 jpg png</span>
+							</label>
 						</li>
-						<li class="vip-li-2">
-							<i></i>
-							<span>vip2</span>
+						<li>
+							<label class="file-list-item">
+								<span>上传转账证明：</span>
+								<span class="file-wrapper"><span class="file-box"><i>选择文件</i><input type="file" class="file-item" name="" id="" value="" /></span><em class="file-name"></em></span>
+								<span class="file-explain">支持上传文件格式 jpg png<b>（微信/支付宝/银行卡转账记录等）</b></span>
+							</label>
 						</li>
-						<li class="vip-li-3">
-							<i></i>
-							<span>vip3</span>
+						<li>
+							<label class="file-list-item">
+								<span>上传协议合同：</span>
+								<span class="file-wrapper"><span class="file-box"><i>选择文件</i><input type="file" class="file-item" name="" id="" value="" /></span><em class="file-name"></em></span>
+								<span class="file-explain">支持上传文件格式  txt word pdf jpg png <b>（电子合同/纸质合同拍照等） </b></span>
+							</label>
 						</li>
-						<li class="vip-li-4">
-							<i></i>
-							<span>vip4</span>
+						<li>
+							<label class="file-list-item">
+								<span>上传电话详单：</span>
+								<span class="file-wrapper"><span class="file-box"><i>选择文件</i><input type="file" class="file-item" name="" id="" value="" /></span><em class="file-name"></em></span>
+								<span class="file-explain">支持上传文件格式 zip rar txt word excel pdf</span>
+							</label>
 						</li>
-						<li class="vip-li-5">
-							<span>vip5</span>
+						<li>
+							<label class="file-list-item">
+								<span>上传其他信息：</span>
+								<span class="file-wrapper"><span class="file-box"><i>选择文件</i><input type="file" class="file-item" name="" id="" value="" /></span><em class="file-name"></em></span>
+								<span class="file-explain">支持上传文件格式 zip rar<b>（学信网等其他资料，资料越详细追回机会越大）</b></span>
+							</label>
 						</li>
 					</ul>
 				</div>
-			</div>
-			<div class="vip-rule-wrapper">
-				<p>晋级等级规则：</p>
-				<p>VIP1：累计消费满10000元，特享受全网消费9.5折；</p>
-				<p>VIP2：累计消费满20000元，特享受全网消费9.0折；</p>
-				<p>VIP3：累计消费满30000元，特享受全网消费8.5折；</p>
-				<p>VIP4：累计消费满40000元，特享受全网消费8.0折；</p>
-				<p>VIP5：累计消费满100000元，特享受全网消费7.0折。</p>
-			</div>
+				<div class="add-wrapper-02">
+					<div class="left-position left-position-02"></div>
+					<ul class="client-item clearfix">
+						<li>
+							<label class="client-item-label">委托人姓名：<input type="text" name="" placeholder="请输入委托人姓名" /> </label>
+						</li>
+						<li>
+							<label class="client-item-label">委托人电话：<input type="text" name="" placeholder="请输入委托人电话" /> </label>
+						</li>
+						<li>
+							<label class="client-item-label">委托人身份证：<input type="text" name="" placeholder="请输入委托人身份证" /> </label>
+						</li>
+					</ul>
+					<ul class="file-list">
+						<li>
+							<label class="file-list-item">
+								<span>上传身份证照：</span>
+								<span class="file-wrapper"><span class="file-box"><i>上传正面</i><input type="file" class="file-item-other" name="" id="" value="" /></span><em></em></span>
+								<span class="file-wrapper"><span class="file-box"><i>上传反面</i><input type="file" class="file-item-other" name="" id="" value="" /></span><em></em></span>
+								<span class="file-explain">支持上传文件格式 jpg png</span>
+							</label>
+						</li>
+						<li>
+							<label class="file-list-item">
+								<span class="left">上传授权书：</span>
+								<span class="file-wrapper"><span class="file-box"><i>选择文件</i><input type="file" class="file-item" name="" id="" value="" /></span><em class="file-name"></em></span>
+								<span class="file-explain">支持上传文件格式  pdf jpg png<b>（于左下角下载授权书，签字盖章后上传）</b><a href="javascript:;" target="_blank">预览样书</a></span>
+							</label>
+						</li>
+					</ul>
+				</div>
+				<div class="sumbit-wrapper-bottom">
+					<ul class="collect-fee-list">
+						<li>
+							<span class="left">费用：</span><span class="right"><em>5元</em> (一个月之内没有结单，届时将退至账户余额)</span>
+						</li>
+						<li>
+							<span class="left">保证金：</span><span class="right"><em>500元</em> (冻结账户余额，7天未上门将退至账户余额)</span>
+						</li>
+						<li>
+							<a href="javascript:;">下载《催收收费说明》</a><a href="javascript:;">下载《委托授权书》</a>
+						</li>
+					</ul>
+					<div class="sumbit-wrapper-btn">
+						<a href="javascript:;" class="btn-add-ok float-right">确定添加</a>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
@@ -210,8 +316,44 @@
 			}
 		})
 		
+		//载入文件
+		function hasFile() {
+			$('.file-name').each(function(){
+				var fileName = $(this).html();
+				if(fileName != "") {
+					$(this).parent().find('i').html('重新选择');
+				}
+			})
+		}
+		
+		//添加文件
+		function fileChange(obj) {
+			$(obj).change(function(){
+				var fileName,
+					index,
+					fileNameStr = $(this).val(),
+					arr = fileNameStr.split('\\');
+					
+				index = arr.length-1;
+				fileName = arr[index];
+				$(this).parent().parent().find('em').html(fileName);
+				var emFileName = $(this).parent().parent().find('em').html();
+				if(obj=="'.file-item'"){
+					if(emFileName==undefined||emFileName=="") {
+						$(this).parent().find("i").html('选择文件');
+					} else {
+						$(this).parent().find("i").html('重新选择');
+					}
+				}
+			})
+		}
+		fileChange('.file-item');
+		fileChange('.file-item-other');
+		
+		//添加名单
 		$("#add-new-list").click(function(){
 			$(".popup-window-wrapper").show();
+			hasFile();
 		})
 		
 		//点击关闭弹窗
