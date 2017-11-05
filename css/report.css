@@ -10,11 +10,11 @@
 	vertical-align: middle;
 }
 .nav-list {
-	margin-left: 60px;
+	margin-left: 40px;
 }
 .nav-list li {
 	float: left;
-	margin: 0 40px;
+	margin: 0 30px;
 }
 .nav-list li a {
 	color: #c0c0c0;
@@ -1188,4 +1188,14 @@
 	position: absolute;
 	top: -10px;
 	left: 50%;
+}
+
+
+/*法律催收*/
+.button-add-jk04 {
+	width: 140px;
+	float: left;
+}
+td span.ing {
+	color: #4dca56;
 }
