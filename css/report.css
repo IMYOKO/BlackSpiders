@@ -1367,3 +1367,80 @@ td span.ing {
 	font-size: 14px;
 	line-height: 20px;
 }
+
+
+/*地面申述*/
+.popup-content-04 {
+	padding: 6px 40px 20px 20px;
+}
+.cs-ing-wrapper {
+	width: 100%;
+	max-height: 600px;
+	overflow-y: scroll;
+}
+.cs-user-wrapper {
+	margin-left: 30px;
+}
+.cs-head-wrapper {
+	padding: 0 0 20px;
+	border-bottom: 1px solid #dbd6d6;
+}
+.cs-head-wrapper span, .cs-head-wrapper em {
+	font-size: 12px;
+	margin-right: 20px;
+}
+.cs-title {
+	padding: 0 12px;
+	height: 24px;
+	color: #fff;
+	text-align: center;
+	line-height: 24px;
+	background: #ff952d;
+	border-radius: 12px;
+	display: inline-block;
+}
+.cs-info-list>li {
+	padding-top: 16px;
+	border-bottom: 1px solid #dbd6d6;
+}
+.cs-info-list .time {
+	color: #999;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	position: relative;
+}
+.cs-info-list .time i {
+	width: 6px;
+	height: 6px;
+	background: #ff952d;
+	border-radius: 6px;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: -20px;
+	margin-top: -3px;
+}
+.cs-info-list .cause {
+	margin-bottom: 20px;
+}
+.cs-info-list .cause h4 {
+	color: #333;
+	line-height: 28px;
+}
+.cs-info-list .cause p {
+	color: #666;
+	line-height: 24px;
+}
+.cs-img-list li {
+	width: 160px;
+	height: 70px;
+	float: left;
+	margin: 0 20px 20px 0;
+	overflow: hidden;
+}
+.cs-img-list li img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
